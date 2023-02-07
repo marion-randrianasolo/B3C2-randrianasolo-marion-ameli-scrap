@@ -26,3 +26,7 @@ for index in range(0, len(films)):
 
 for film in movie_list:
     print(film['film_title'], '(' + film['year'] + ')', film['note'])
+
+# ficher csv
+data_frame = pd.DataFrame(movie_list)
+data_frame.to_csv('webscrap_imdb_top250.csv', index=False)
